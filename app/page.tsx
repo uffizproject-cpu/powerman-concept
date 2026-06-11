@@ -15,7 +15,8 @@ const COLORS = {
 };
 
 function useInView(threshold = 0.15) {
-  const ref = useRef(null);
+  const ref =
+useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const obs = new IntersectionObserver(
